@@ -1,0 +1,1 @@
+# merchi-wordpress-plugin
