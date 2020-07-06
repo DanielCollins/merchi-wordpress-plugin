@@ -40,6 +40,9 @@
 <p>This will open up your "dom and style inspector". I'm using Firefox here, other browsers will look slightly different. Here we can identify the class associated with this element. Let's copy it and paste it into Merchi to see if it works. Follow the screenshots below.</p>
 <img src="https://user-images.githubusercontent.com/7565117/86549252-70f54f80-bf82-11ea-8511-e83a5b889e46.png" />
 <img src="https://user-images.githubusercontent.com/7565117/86550158-0265c100-bf85-11ea-95c1-229ce6f23255.png" />
+<p>Now head back over to your home page and let's see if the Merchi cart initialises.</p>
+<img src="https://user-images.githubusercontent.com/7565117/86550419-a8b1c680-bf85-11ea-9745-b8dae0aed413.png" />
+<p>Look in the right hand corner where the Woocommerce shopping cart used to be. It's gone and Merchi has taken its place!</p>
 
 documentation
 
