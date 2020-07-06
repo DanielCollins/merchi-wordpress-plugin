@@ -37,7 +37,7 @@
 <p>Go ahead and download and activate the Storefront theme on your Wordpress site. More information about installing themes can be found <a href="https://www.wpbeginner.com/beginners-guide/how-to-install-a-wordpress-theme/">here.</a></p>
 <p>Once you're theme is set up, we will head over to the home page and <strong>"inspect element"</strong> on what looks to be a good candidate for our universal shopping cart element. Follow the screenshot below.</p>
 <img src="https://user-images.githubusercontent.com/7565117/86548539-22df4c80-bf80-11ea-872d-7399fa2b3aeb.png" />
-<p>This will open up your "dom and style inspector". I'm using Firefox here, other browsers will look slightly different. Here we can identify this class associated with the element we are trying to target. Let's copy it and paste it into Merchi to see if it works.</p>
+<p>This will open up your "dom and style inspector". I'm using Firefox here, other browsers will look slightly different. Here we can identify the class associated with this element. Let's copy it and paste it into Merchi to see if it works.</p>
 <img src="https://user-images.githubusercontent.com/7565117/86549252-70f54f80-bf82-11ea-8511-e83a5b889e46.png" />
 <img src="https://user-images.githubusercontent.com/7565117/86549751-c716c280-bf83-11ea-8508-d88bccd8b7b9.png" />
 
