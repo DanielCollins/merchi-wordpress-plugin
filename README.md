@@ -46,14 +46,9 @@
 
 documentation
 
-install and set up woocommerce (link to how to set up woocommerce)
-install merchi plugin
-configure merchi plugin
-	URL id
-	Mount point class
-	woocommerce pub key
-	woocommerce secret key
-configure or check configurations of merchi account/products
-remove woocommerce pages since we are using merchi's shopping cart
-fetch merchi products
-add custom css
+<ul>
+	<li>install merchi plugin</li>
+	<li>configure or check configurations of merchi account/products</li>
+	<li>fetch merchi products</li>
+<li>add custom css</li>
+</ul>
