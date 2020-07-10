@@ -39,6 +39,7 @@ jQuery(document).ready(function ($) {
             name: merchiProduct.name(),
             regular_price: merchiProduct.unitPrice(),
             images: merchiProductImages,
+            sku: merchiProduct.id(),
           });
         }
       }
