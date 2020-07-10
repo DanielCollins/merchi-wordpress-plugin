@@ -50,5 +50,6 @@ documentation
 	<li>install merchi plugin</li>
 	<li>configure or check configurations of merchi account/products</li>
 	<li>fetch merchi products</li>
-<li>add custom css</li>
+	<li>add custom css</li>
+	<li>change permalink stuff</li>
 </ul>
