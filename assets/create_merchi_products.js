@@ -4,19 +4,27 @@ jQuery(document).ready(function ($) {
     images: {},
     domain: { company: {} },
   };
-
-  async function downloadMerchiImageReturnData(file) {
-    var url = file.downloadUrl();
-    return { src: url };
+  var allowedExtensions = {
+    "image/jpeg": "jpeg",
+    "image/jpg": "jpg",
+    "image/png": "png",
+  };
+  function downloadMerchiImageReturnData(file) {
+    var mimetype = file.mimetype() ? file.mimetype() : null,
+      downloadSrc = "https://api.merchi.co/v6/product-public-file/download/",
+      extension = mimetype ? allowedExtensions[mimetype] : null;
+    return extension
+      ? { src: `${downloadSrc}${file.id()}.${extension}` }
+      : null;
   }
 
-  async function convertMerchiProductImages(merchiProduct) {
+  function convertMerchiProductImages(merchiProduct) {
     return merchiProduct.images()
       ? merchiProduct.images().map(downloadMerchiImageReturnData)
       : [];
   }
 
-  async function convertedMerchiProducts(products) {
+  function convertedMerchiProducts(products) {
     var _products = [],
       i;
     if (products) {
@@ -24,8 +32,7 @@ jQuery(document).ready(function ($) {
         var merchiProduct = products[i],
           merchiProductImages;
         if (merchiProduct.json && merchiProduct.json === "product") {
-          merchiProductImages = await convertMerchiProductImages(merchiProduct);
-          console.log(merchiProductImages);
+          merchiProductImages = convertMerchiProductImages(merchiProduct);
           _products.push({
             description: merchiProduct.description(),
             price: merchiProduct.unitPrice(),
@@ -43,7 +50,6 @@ jQuery(document).ready(function ($) {
     // on fetch merchi products success pass them to the
     // "create_merchi_products" endpoint so that they can be saved
     // into the products table
-    console.log(data);
     var products = data,
       meta = data.meta,
       msgName = meta.available === 1 ? "product" : "products",
@@ -85,29 +91,3 @@ jQuery(document).ready(function ($) {
     });
   });
 });
-
-// testing images
-var productz = {
-  create: [
-    {
-      name: "product 1",
-      type: "simplwwe",
-      regular_price: "221.99",
-      images: [
-        {
-          src:
-            "http://demo.woothemes.com/woocommerce/wp-content/uploads/sites/56/2013/06/T_2_front.jpg",
-        },
-        // {
-        //   src:
-        //     "https://merchi-production.s3-accelerate.amazonaws.com/W7u3xHqKSZMbrraLTzLSDNQBhN1OdkTj9pKVPKQPv1o3CAR1tNDU3PjIslNhOiBX?AWSAccessKeyId=AKIAJVUUHFK32X3XPCNA&Signature=A9eiuHHmjRgaQ0BfBKxodLNyu7c%3D&Expires=1593056996",
-        // },
-      ],
-    },
-    {
-      name: "product 2",
-      type: "simple 1",
-      regular_price: "2321.99",
-    },
-  ],
-};
