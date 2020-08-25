@@ -44,7 +44,7 @@
 <img src="https://user-images.githubusercontent.com/7565117/86550671-6046d880-bf86-11ea-9f82-c63dcb79a27c.png" />
 <p></p>
 
-documentation
+documentation tbc...
 
 <ul>
 	<li>install merchi plugin</li>
