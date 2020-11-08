@@ -20,7 +20,7 @@ class ShoppingCartInject extends BaseController
         $id = get_option("merchi_url");
         // Need to provide a mountPointId or mountPointClass for merchi cart to render
         $mountPoint = get_option("merchi_mount_point_id");
-        $content = "<script type='text/javascript' src='https://merchi.co/static/js/dist/load-component.js?component=RemoteShoppingCart&mountpointClass=$mountPoint&props={\"storeId\":$id, \"includeModalCss\":true}'></script>";
+        $content = "<script type='text/javascript' src='https://merchi.co/static/js/dist/load-component.js?component=RemoteShoppingCart&mountpointClass=$mountPoint&props={\"storeId\":$id, \"includeModalCss\":true, \"showOpenCartButton\": true, \"cartButtonWrappedInContainer\": true}'></script>";
         echo $content;
     }
 }
